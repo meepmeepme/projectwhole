@@ -3,6 +3,7 @@ var money = 0;
 var upgrade = 1;
 var upgradecost = 1;
 var worker = 0;
+var equipment = 0;
 var workercost = 1;
 function addlog() {
 	 log = log + upgrade;
@@ -67,7 +68,13 @@ var workerwork = function(){
 		document.getElementById('log').innerHTML = log;
 	}, 1000)
 }
-
+var police = function(){
+	setInterval(function(){
+		if (worker > equipment);
+	alert('you have been fined 300 for not paying for safety equipment')
+	document.getElementById('money').innerHTML = money;
+	}, 300000)
+}
 //audio
 var boom = new Audio("music/TCTM.mp3");
 var countUp = function (){
