@@ -53,8 +53,8 @@ function upgradelog() {
 }
 function autoclicker(){
 	if (money >= 600 * workercost) {
-		workercost = workercost * 1.5;
 		money = money-600*workercost;
+		workercost = workercost * 1.5;
 		worker++;
 		document.getElementById('workercost').innerHTML = workercost*600;
 		document.getElementById('money').innerHTML = money;
