@@ -29,10 +29,16 @@ body{
 	text-align: center;
 }
 #button1{
+	border: none;
 	background-color: #89cff0;
 	color: white;
+	height: 100%;
+	width: 100%;
 }
 #button2{
+	border: none;
 	background-color: #89cff0;
 	color: white;
+	height: 100%;
+	width: 100%;
 }
