@@ -52,11 +52,11 @@ function upgradelog() {
 	};
 }
 function autoclicker(){
-	if (money >= 600 * workercost) {
-		money = money-600*workercost;
+	if (money >= 300 * workercost) {
+		money = money-300*workercost;
 		workercost = workercost * 1.5;
 		worker++;
-		document.getElementById('workercost').innerHTML = workercost*600;
+		document.getElementById('workercost').innerHTML = workercost*300;
 		document.getElementById('money').innerHTML = money;
 	}else
 		alert('You so not have enough money to buy a worker')
