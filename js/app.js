@@ -3,8 +3,17 @@ var money = 0;
 var upgrade = 1;
 var upgradecost = 1;
 var worker = 0;
-var equipment = 0;
+var equipment = 1;
 var workercost = 1;
+
+window.onload = function() {
+  workerwork();
+  police();
+};
+
+
+
+
 function addlog() {
 	 log = log + upgrade;
 	console.log('logs' + log);
@@ -55,25 +64,46 @@ function upgradelog() {
 function autoclicker(){
 	if (money >= 300 * workercost) {
 		money = money-300*workercost;
-		workercost = workercost * 1.5;
+		workercost = workercost * 1;
 		worker++;
 		document.getElementById('workercost').innerHTML = workercost*300;
 		document.getElementById('money').innerHTML = money;
-	}else
-		alert('You so not have enough money to buy a worker')
+		document.getElementById('worker').innerHTML = worker;
+	}else{
+		alert('You do not have enough money to buy a worker');
+	}
 }
 var workerwork = function(){
 	setInterval(function(){
 		log = log+(worker*5);
 		document.getElementById('log').innerHTML = log;
+		console.log('logged with ' + worker)
 	}, 1000)
 }
 var police = function(){
+
 	setInterval(function(){
-		if (worker > equipment);
-	alert('you have been fined 300 for not paying for safety equipment')
+		console.log("police");
+		if (worker > equipment){
+			money = money-(300*worker-equipment);
+			alert('you have been fined 300 for not paying for safety equipment');
+			document.getElementById('money').innerHTML = money;
+			console.log('checked the workers');
+		}else{
+			money = money + 50;
+			document.getElementById('money').innerHTML = money;
+		};
+	}, 300000);
+}
+function buyequipment() {
+	if (money >= 300){
+		money = (money-300)
+		equipment++;
 	document.getElementById('money').innerHTML = money;
-	}, 300000)
+	document.getElementById('equipment').innerHTML = equipment;
+}else{
+	alert('You do not have enough money to buy worker equipment');
+	};
 }
 //audio
 var boom = new Audio("music/TCTM.mp3");

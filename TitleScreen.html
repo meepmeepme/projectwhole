@@ -13,7 +13,7 @@
     <title>Tree Choppers</title>
     </center>
   </head>
-  <body bgcolor="#89cff0" onload="workerwork()">
+  <body bgcolor="#89cff0">
           <button onclick="addlog()" id="button1" >Get more <br><img src="images/log.jpg"height="72" width="72"><br><br><br><br></button>
  <br>
           <button onclick="addmoney()" id="button2" > Sell <img src="images/log.jpg" height="72" width="72"><br> for <br><img src="images/mon.png" height="72" width="72"></button>
@@ -28,7 +28,8 @@ Worker Cost is : <div id="workercost">300</div>
 <hr>
 <button onclick="sell10()" id="button3">Sell 10<br><img src="images/log.jpg" height="72" width="72"><br>for 10<br><img src="images/mon.png" height="72" width="72"></button>
 <button onclick="upgradelog()" id="button1">Upgrade Your Tree for more <br> <img src="images/log.jpg" height="72" width="72"></button>
-<button id="button1" onclick="autoclicker()">Buy a Worker to automatically make 5<br><img src="images/log.jpg" height="72" width="72"> </button>
+<button id="button1" onclick="autoclicker();police()">Buy a Worker to automatically make 5<br><img src="images/log.jpg" height="72" width="72"> </button>
+<button id="button1" onclick="buyequipment()">Buy safety equipment for your workers for $300<br> You have <div id="worker">0</div> <br><img src="images/work.png" height="72" width="72"> and<br> <div id="equipment">0</div><br> <img src="images/safe.png" height="72" width="72"></button>
   </body>
   </font>
 </html>
