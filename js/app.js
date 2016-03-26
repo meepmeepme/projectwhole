@@ -96,8 +96,8 @@ var police = function(){
 	}, 300000);
 }
 function buyequipment() {
-	if (money >= 300){
-		money = (money-300)
+	if (money >= 100){
+		money = (money-200)
 		equipment++;
 	document.getElementById('money').innerHTML = money;
 	document.getElementById('equipment').innerHTML = equipment;
